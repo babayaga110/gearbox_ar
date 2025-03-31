@@ -157,29 +157,6 @@
         outline: 1px solid #4285f4;
       }
 
-      /* New styling for Play/Pause buttons */
-      #controls {
-        position: absolute;
-        bottom: 50px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 20px;
-      }
-
-      .control-button {
-        background-color: #4285f4;
-        color: white;
-        font-size: 16px;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      .control-button:hover {
-        background-color: #3367d6;
-      }
     </style>
   </head>
   <body>
@@ -208,27 +185,5 @@
       </button>
     </model-viewer>
 
-    <!-- Controls for Play and Pause -->
-    <div id="controls">
-      <button class="control-button" id="play-button">Play</button>
-      <button class="control-button" id="pause-button">Pause</button>
-    </div>
-
-    <script>
-      // Get the model-viewer element and the buttons
-      const modelViewer = document.getElementById('model-viewer');
-      const playButton = document.getElementById('play-button');
-      const pauseButton = document.getElementById('pause-button');
-
-      // Play button event listener
-      playButton.addEventListener('click', () => {
-        modelViewer.play(); // Starts the animation
-      });
-
-      // Pause button event listener
-      pauseButton.addEventListener('click', () => {
-        modelViewer.pause(); // Pauses the animation
-      });
-    </script>
   </body>
 </html>
